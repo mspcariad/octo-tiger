@@ -2,13 +2,13 @@ name: Hello World Training Workflow
 
 on:
   workflow_dispatch:
+  issues:
+    types: [opened]
 
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-      - name: Greet the User
-        run: echo "Hello World!"
       - name: List empty folder
         run: ls -l
       - uses: actions/checkout@v2
